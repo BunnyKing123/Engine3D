@@ -76,10 +76,8 @@ public class Panel3D extends JPanel {
 				.createFace("fdt-top-left-front", "fdt-top-right-front", "fdt-top-right-back", "fdt-top-left-back")
 				.createFace("fdt-bot-left-front", "fdt-bot-right-front", "fdt-bot-right-back", "fdt-bot-left-back")
 				.finish()
-				.translate(-200, 0, 0);
-		//model2 = model.clone().finish().translate(400, 0, -300);
-		//translatedAndDilated = model.clone().translate(-300, 0, 0).dilate(1.5);
-		//model.dilate(0.01);
+				.translate(-200, 0, 0)
+				.dilate(0.7);
 		
 	}
 	
@@ -88,13 +86,7 @@ public class Panel3D extends JPanel {
 		g.clearRect(0, 0, 800, 800);
 		model.rotateY(Math.toRadians(1));
 		model.rotateX(Math.toRadians(1));
-		//translatedAndDilated.rotateY(Math.toRadians(1));
-		//translatedAndDilated.rotateX(Math.toRadians(1));
-		//model.dilate(1.01);
-		//model.translate(-1, 0, -1);
 		model.render(false, false, true, g);
-		//model2.render(false, false, true, g);
-		//translatedAndDilated.render(false, false, true, g);
 	}
 	
 }
